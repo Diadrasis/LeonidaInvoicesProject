@@ -46,7 +46,7 @@
     <SuiteName>Διαχείριση</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>0.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -299,7 +299,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="rptInvoiceVassilopoulos.rdlc" />
+    <EmbeddedResource Include="rptInvoiceLeonida.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="isoDiadrasis_1_TemporaryKey.pfx" />

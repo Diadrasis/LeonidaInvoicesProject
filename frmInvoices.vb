@@ -42,6 +42,7 @@
         dgv.Columns(getColIndex(dgv, "payComments")).ReadOnly = True
 
         dgv.Columns(getColIndex(dgv, "customerId")).Visible = False
+        dgv.Columns(getColIndex(dgv, "invoiceComments")).Visible = False
 
         searchExpression2 = ""
         searchExpression3 = ""
@@ -67,6 +68,10 @@
                 paymentform.invId = Convert.ToInt32(dgv.Rows(e.RowIndex).Cells("invoiceId").Value)
                 paymentform.invForm = Me
                 paymentform.Show()
+            ElseIf dgv.Rows(e.RowIndex).Cells("Clone").ColumnIndex = e.ColumnIndex Then
+                CloneInvoice(Convert.ToInt32(dgv.Rows(e.RowIndex).Cells("invoiceId").Value))
+                RefreshDataGrid()
+                ComboBox1.SelectedIndex = 1
             End If
         End If
     End Sub
@@ -108,6 +113,34 @@
             searchExpression3 = "customerID =" + CStr(Me.ComboBox2.SelectedValue)
         End If
         FilterData()
+    End Sub
+
+    Private Sub CloneInvoice(ByVal invID As Integer)
+        Dim myConnection As New System.Data.SqlClient.SqlConnection
+        myConnection.ConnectionString = My.Settings.leonidaDBConnectionString
+
+        Dim myCommand As New System.Data.SqlClient.SqlCommand
+        myCommand.Connection = myConnection
+
+        myCommand.CommandType = CommandType.StoredProcedure
+        myCommand.CommandText = "pDuplicateInvoice"
+
+        myCommand.Parameters.Add("@invId", SqlDbType.Int)
+        myCommand.Parameters("@invId").Value = invID
+
+        myConnection.Open()
+
+        Try
+            myCommand.ExecuteNonQuery()
+        Catch ex As Exception
+            MessageBox.Show("Η δημιουργία αντιγράφου ακυρώθηκε λόγω σφάλματος...")
+            MessageBox.Show("Σφάλμα: " & ex.Message)
+            myConnection.Close()
+            Exit Sub
+        End Try
+        myConnection.Close()
+        MessageBox.Show("Ο κλώνος δημιουργήσθηκε..")
+
     End Sub
 
     Private Sub FilterData()
