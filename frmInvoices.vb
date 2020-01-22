@@ -17,7 +17,7 @@
         DesignDataGridView(dgv)
         DesignDataGridNavigator(dbn)
 
-        Me.Text = "Παραστατικά"
+        Me.Text = "Παραστατικά  και άλλα "
 
         DesignColumn(dgv, "invoiceId", False)
         DesignColumn(dgv, "invoiceCode", "Κωδικός", 65, Color.LightCyan)
