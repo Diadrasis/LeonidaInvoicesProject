@@ -37,15 +37,7 @@ Partial Class frmProject
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.TblProjectBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.TblProjectDataGridView = New System.Windows.Forms.DataGridView()
-        Me.projectId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.projectTypeId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.customerId = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.VwCustomerDiadrasisBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.projectName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.invoice = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.CreditInvoice = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.RetailReceipt = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.projectComments = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.VwCustomerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TblProjectTypeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -54,6 +46,14 @@ Partial Class frmProject
         Me.VwCustomerTableAdapter = New leonida.leonidaDBDataSetTableAdapters.vwCustomerTableAdapter()
         Me.TblProjectTypeTableAdapter = New leonida.leonidaDBDataSetTableAdapters.tblProjectTypeTableAdapter()
         Me.VwCustomerDiadrasisTableAdapter = New leonida.leonidaDBDataSetTableAdapters.vwCustomerDiadrasisTableAdapter()
+        Me.projectId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.projectTypeId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.customerId = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.projectName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.invoice = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.CreditInvoice = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.RetailReceipt = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.projectComments = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.TblProjectBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TblProjectBindingNavigator.SuspendLayout()
         CType(Me.TblProjectBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -198,68 +198,10 @@ Partial Class frmProject
         Me.TblProjectDataGridView.Size = New System.Drawing.Size(1152, 220)
         Me.TblProjectDataGridView.TabIndex = 3
         '
-        'projectId
-        '
-        Me.projectId.DataPropertyName = "projectId"
-        Me.projectId.HeaderText = "projectId"
-        Me.projectId.Name = "projectId"
-        Me.projectId.ReadOnly = True
-        '
-        'projectTypeId
-        '
-        Me.projectTypeId.DataPropertyName = "projectTypeId"
-        Me.projectTypeId.HeaderText = "projectTypeId"
-        Me.projectTypeId.Name = "projectTypeId"
-        '
-        'customerId
-        '
-        Me.customerId.DataPropertyName = "customerId"
-        Me.customerId.DataSource = Me.VwCustomerDiadrasisBindingSource
-        Me.customerId.DisplayMember = "customerTitle"
-        Me.customerId.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.[Nothing]
-        Me.customerId.HeaderText = "customerId"
-        Me.customerId.Name = "customerId"
-        Me.customerId.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.customerId.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.customerId.ValueMember = "customerId"
-        '
         'VwCustomerDiadrasisBindingSource
         '
         Me.VwCustomerDiadrasisBindingSource.DataMember = "vwCustomerDiadrasis"
         Me.VwCustomerDiadrasisBindingSource.DataSource = Me.leonidaDBDataSet
-        '
-        'projectName
-        '
-        Me.projectName.DataPropertyName = "projectName"
-        Me.projectName.HeaderText = "projectName"
-        Me.projectName.MaxInputLength = 1000000
-        Me.projectName.Name = "projectName"
-        '
-        'invoice
-        '
-        Me.invoice.HeaderText = "Τιμολόγηση Υπηρεσιών"
-        Me.invoice.Image = Global.leonida.My.Resources.Resources.coins
-        Me.invoice.Name = "invoice"
-        '
-        'CreditInvoice
-        '
-        Me.CreditInvoice.HeaderText = "Πιστωτικό"
-        Me.CreditInvoice.Image = Global.leonida.My.Resources.Resources.coins
-        Me.CreditInvoice.Name = "CreditInvoice"
-        '
-        'RetailReceipt
-        '
-        Me.RetailReceipt.HeaderText = "Απόδειξη Λιανικής"
-        Me.RetailReceipt.Image = Global.leonida.My.Resources.Resources.coins
-        Me.RetailReceipt.Name = "RetailReceipt"
-        Me.RetailReceipt.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.RetailReceipt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
-        'projectComments
-        '
-        Me.projectComments.DataPropertyName = "projectComments"
-        Me.projectComments.HeaderText = "projectComments"
-        Me.projectComments.Name = "projectComments"
         '
         'VwCustomerBindingSource
         '
@@ -356,6 +298,65 @@ Partial Class frmProject
         'VwCustomerDiadrasisTableAdapter
         '
         Me.VwCustomerDiadrasisTableAdapter.ClearBeforeFill = True
+        '
+        'projectId
+        '
+        Me.projectId.DataPropertyName = "projectId"
+        Me.projectId.HeaderText = "projectId"
+        Me.projectId.Name = "projectId"
+        Me.projectId.ReadOnly = True
+        '
+        'projectTypeId
+        '
+        Me.projectTypeId.DataPropertyName = "projectTypeId"
+        Me.projectTypeId.HeaderText = "projectTypeId"
+        Me.projectTypeId.Name = "projectTypeId"
+        '
+        'customerId
+        '
+        Me.customerId.DataPropertyName = "customerId"
+        Me.customerId.DataSource = Me.VwCustomerDiadrasisBindingSource
+        Me.customerId.DisplayMember = "customerTitle"
+        Me.customerId.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.[Nothing]
+        Me.customerId.HeaderText = "customerId"
+        Me.customerId.Name = "customerId"
+        Me.customerId.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.customerId.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.customerId.ValueMember = "customerId"
+        '
+        'projectName
+        '
+        Me.projectName.DataPropertyName = "projectName"
+        Me.projectName.HeaderText = "projectName"
+        Me.projectName.MaxInputLength = 1000000
+        Me.projectName.Name = "projectName"
+        '
+        'invoice
+        '
+        Me.invoice.HeaderText = "Τιμολόγηση "
+        Me.invoice.Image = Global.leonida.My.Resources.Resources.coins
+        Me.invoice.Name = "invoice"
+        '
+        'CreditInvoice
+        '
+        Me.CreditInvoice.HeaderText = "Πιστωτικό"
+        Me.CreditInvoice.Image = Global.leonida.My.Resources.Resources.coins
+        Me.CreditInvoice.Name = "CreditInvoice"
+        '
+        'RetailReceipt
+        '
+        Me.RetailReceipt.HeaderText = "Απόδειξη Λιανικής"
+        Me.RetailReceipt.Image = Global.leonida.My.Resources.Resources.coins
+        Me.RetailReceipt.Name = "RetailReceipt"
+        Me.RetailReceipt.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.RetailReceipt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.RetailReceipt.Visible = False
+        '
+        'projectComments
+        '
+        Me.projectComments.DataPropertyName = "projectComments"
+        Me.projectComments.HeaderText = "projectComments"
+        Me.projectComments.Name = "projectComments"
         '
         'frmProject
         '

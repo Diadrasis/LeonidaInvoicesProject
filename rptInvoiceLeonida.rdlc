@@ -2186,7 +2186,7 @@
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>GR5401710190006019010215026</Value>
+                <Value>GR41 0172 0390 0050 3908 8217 669</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Century Gothic</FontFamily>
@@ -2254,7 +2254,7 @@
                   <Value>ΜΑΡΙΑ ΛΕΩΝΙΔΑ</Value>
                   <Style>
                     <FontFamily>Century Gothic</FontFamily>
-                    <FontSize>11pt</FontSize>
+                    <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
@@ -2266,7 +2266,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>ΟΙΚΟΝΟΜΟΛΟΓΟΣ ΛΟΓΙΣΤΗΣ ΦΟΡΟΤΕΧΝΙΚΟΣ</Value>
+                  <Value>ΥΠΗΡΕΣΙΕΣ ΕΚΠΑΙΔΕΥΣΗΣ &amp; ΑΝΑΠΤΥΞΗΣ ΠΟΛΥΜΕΣΩΝ</Value>
                   <Style>
                     <FontFamily>Century Gothic</FontFamily>
                   </Style>
@@ -2279,7 +2279,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>ΠΟΛΥΤΕΧΝΕΙΟΥ 12 - Τ.Κ. 104 33 ΑΘΗΝΑ</Value>
+                  <Value>ΒΟΙΩΤΙΑΣ 7-9  - Τ.Κ. 152 31 ΑΘΗΝΑ</Value>
                   <Style>
                     <FontFamily>Century Gothic</FontFamily>
                   </Style>
@@ -2292,7 +2292,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>ΑΦΜ: 042418399 - ΔΟΥ: Δ' ΑΘΗΝΑΣ</Value>
+                  <Value>ΑΦΜ: 056059895 - ΔΟΥ: ΧΑΛΑΝΔΡΙΟΥ</Value>
                   <Style>
                     <FontFamily>Century Gothic</FontFamily>
                   </Style>
@@ -2305,26 +2305,13 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>ΤΗΛ: 210 52 33 244 - FAX: 210 52 33 249</Value>
-                  <Style>
-                    <FontFamily>Century Gothic</FontFamily>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>Center</TextAlign>
-              </Style>
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>email: </Value>
+                  <Value>ΤΗΛ: 210 6753 095 - email: </Value>
                   <Style>
                     <FontFamily>Century Gothic</FontFamily>
                   </Style>
                 </TextRun>
                 <TextRun>
-                  <Value>vasilopoulos.petros@gmail.com</Value>
+                  <Value>leonidamaria1@gmail.com</Value>
                   <Style>
                     <FontFamily>Century Gothic</FontFamily>
                     <TextDecoration>Underline</TextDecoration>
@@ -2344,9 +2331,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Left>0.42334cm</Left>
+          <Top>0.01667cm</Top>
+          <Left>16.37771cm</Left>
           <Height>2.84833cm</Height>
-          <Width>8.67796cm</Width>
+          <Width>9.31296cm</Width>
           <Style>
             <Border>
               <Style>None</Style>

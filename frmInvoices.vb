@@ -140,7 +140,7 @@
             Exit Sub
         End Try
         myConnection.Close()
-        MessageBox.Show("Ο κλώνος δημιουργήσθηκε..")
+        MessageBox.Show("O κλώνος δημιουργήθηκε...")
 
     End Sub
 

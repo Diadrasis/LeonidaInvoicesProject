@@ -37,6 +37,7 @@
         dgv.Columns(getColIndex(dgv, "customerId")).Frozen = True
 
         dgv.Columns(getColIndex(dgv, "projectTypeId")).Visible = False
+        'dgv.Columns(getColIndex(dgv, "RetailReceipt")).Visible = False
 
         DesignColumn(dgv, "projectComments", "Παρατηρήσεις", 150)
 

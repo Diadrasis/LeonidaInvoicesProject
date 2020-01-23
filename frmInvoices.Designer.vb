@@ -400,7 +400,7 @@ Partial Class frmInvoices
         'invoice
         '
         Me.invoice.HeaderText = "Εκτύπωση"
-        Me.invoice.Image = Global.leonida.My.Resources.Resources.documentation
+        Me.invoice.Image = Global.leonida.My.Resources.Resources.print_printer
         Me.invoice.Name = "invoice"
         '
         'Payment
