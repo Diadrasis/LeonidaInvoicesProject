@@ -17,7 +17,7 @@
         DesignDataGridView(dgv)
         DesignDataGridNavigator(dbn)
 
-        Me.Text = "Παραστατικά  και άλλα "
+        Me.Text = "Παραστατικά "
 
         DesignColumn(dgv, "invoiceId", False)
         DesignColumn(dgv, "invoiceCode", "Κωδικός", 65, Color.LightCyan)
@@ -33,7 +33,8 @@
 
         DesignColumn(dgv, "invoicePaid", "Εξοφ.", 50)
         DesignColumn(dgv, "payDate", "Ημ. Εξοφ.", 90)
-        DesignColumn(dgv, "payComments", "Σχόλια Πληρωμής", 100)
+        DesignColumn(dgv, "payComments", "Σχόλιας", 100)
+        DesignColumn(dgv, "invoice", "Εκτύπωση", 70)
         DesignColumn(dgv, "payment", "Πληρωμή", 70)
 
         dgv.Columns(getColIndex(dgv, "payDate")).ReadOnly = True
@@ -78,11 +79,11 @@
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
         If ComboBox1.SelectedIndex = 0 Then
-            dgv.Columns("invoice").HeaderText = "Εκτύπωση Αντιγράφου"
+            dgv.Columns("invoice").HeaderText = "Εκτύπωση"
             searchExpression1 = "invoiceCompleted = 1 AND invoiceIssued = 1"
 
         Else
-            dgv.Columns("invoice").HeaderText = "Επεξεργασία Παραστατικού"
+            dgv.Columns("invoice").HeaderText = "Επεξεργασία"
             searchExpression1 = "invoiceCompleted = 0 AND invoiceIssued = 1"
         End If
         FilterData()
